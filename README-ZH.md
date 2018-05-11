@@ -34,7 +34,9 @@ module.exports = {
     // 如果你想看一下ajax的loading效果，该配置项可以设置接口的返回延迟
     timeout: 500,
     // 如果你想看一下接口请求失败的效果，将rate设置成0就可以了，rate取值范围0~1，代表成功的概率
-    rate: 1
+    rate: 1,
+    // mock属性为false的话可以关闭掉mock服务
+    mock: true
   },
   // api...
   '/pkApi/getList': {

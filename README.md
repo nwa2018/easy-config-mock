@@ -35,7 +35,9 @@ module.exports = {
     // maybe you want to see the ajax loading effect, you can set the request delay
     timeout: 500,
     // maybe you want to see what happen when the request fail, you can set the rate to 0, rate range between 0~1, mean the success rate
-    rate: 1
+    rate: 1,
+    // set false to stop the mock server
+    mock: true
   },
   // api...
   '/pkApi/getList': {

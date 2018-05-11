@@ -20,6 +20,12 @@ EasyConfigMock.prototype = {
   constructor: EasyConfigMock,
   init () {
     const options = require(this.path)
+    if (options.common) {
+      if (options.common.mock !== undefined && !options.common.mock) {
+        console.log('options mock is false, stop the mock server...')
+        return
+      }
+    }
     this.port = (options.common && options.common.port) || this.port
     portfinder.basePort = this.port
     portfinder.getPort((err, port) => {
